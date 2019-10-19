@@ -85,3 +85,26 @@
 \newcommand{\desarrolador}{Desarrollador}
 \newcommand{\analista}{Analista}
 \newcommand{\pmo}{Gerente de proyecto}
+
+\newenvironment{boxed}
+{
+    \begin{table}[]
+        \begin{tabular}{|p{0.9\textwidth}|}
+        \hline\\
+}
+{ 
+        \\\\\hline
+        \end{tabular} 
+    \end{table}
+}
+
+\newcommand{\prettyTable}[2]{
+    \begin{table}[h!]
+        \resizebox{\textwidth}{!}{
+            \begin{tabular}{#1}
+                \hline
+                #2
+            \end{tabular}
+        }
+    \end{table}
+}
