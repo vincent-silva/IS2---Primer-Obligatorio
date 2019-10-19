@@ -1,0 +1,29 @@
+% Formato reporte Universidad ORT Uruguay
+\ProvidesPackage{ort}
+
+\newcommand*{\materia}[1]{\gdef\@materia{#1}%
+}
+\newcommand*{\@materia}{Ingenier\'{i}a de Software 1}
+\newcommand*{\docente}[1]{\gdef\@docente{#1}%
+}
+\newcommand*{\@docente}{\texttt{\string\docente} no definido, corregir.}
+
+\renewcommand*{\maketitle}{%
+\begin{titlepage}
+	\centering
+{\LARGE Universidad ORT Uruguay \par}
+\vspace{0.5cm}
+{\Large Facultad de Ingenier\'{i}a \par}
+\vspace{3cm}
+{\huge\bfseries\@title\unskip\strut\par}
+\vspace{2cm}
+{\Large\@author\unskip\strut\par}
+\vspace{1cm}
+% \Large Docente: \@docente\unskip\strut\par
+\vfill
+{\Large Entregado como requisito de la materia \@materia\unskip\strut\par}
+\vfill
+{\Large \@date\par}
+\end{titlepage}
+}
+\endinput

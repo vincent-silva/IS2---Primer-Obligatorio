@@ -1,0 +1,244 @@
+\section{Métricas}
+
+\todo{ELIMINAR LUEGO DE TERMINAR}
+\begin{itemize}
+    \item Plantilla de generación de objetivo
+    \item Propósito: Comprender
+    \\ Comprender, Controlar, Predecir, Mejorar
+    \item Atributo: el tipo y número de defectos
+    \item Objeto (Entidad): que se introducen en todas las etapas del desarrollo
+    \\Proceso, producto, proyecto
+    \item Punto de vista: desde un nivel gerencial
+    \\ Stakeholder: Usuario, Cliente, Gerente, Desarrollo, Tester …
+    \item Entorno: para los proyectos del cliente X
+\end{itemize}
+
+Template:
+
+
+\begin{itemize}
+    \item Meta
+\end{itemize}
+
+Preguntas:
+\begin{itemize}
+    \item Pregunta 1.
+    \item Pregunta 2.
+\end{itemize}
+
+Métrica:
+\begin{itemize}
+    \item Métrica 1.
+\end{itemize}
+\todo{ELIMINAR LUEGO DE TERMINAR}
+
+\subsection{Usabilidad de la aplicacón}
+
+\gqm {
+    % Propósito
+    Comprender 
+    % Atributo
+    la facilidad de uso de de 
+    % Objeto
+    la aplicación 
+    % Punto de vista
+    desde el punto de vista del usuario
+} {
+    \pregunta Qué tan sencillo es el uso de la aplicación?
+} {
+    \metrica {
+        Usabildad
+    } {
+        \item Nombre: Usabildad
+        \item Información que brinda: Usabilidad de la aplicación
+        \item Para quien es útil: Gerente del proyecto
+        \item Entidad: Aplicación
+        \item Fórmula: $\Sigma$ items de la heurística cumplidos en su totalidad
+        \item Atributos a observar
+            \begin{itemize}
+                \item Usabilidad de la aplicación.
+            \end{itemize}
+        \item Recolección: Heurísticas de usabilidad de Nielsen
+        \item Responsable: Desarrollador
+        \item Frecuencia: Mensual
+        \item Almacenamiento: N/A
+        \item Herramientas a utilizar: N/A
+    }
+}
+
+\subsection{Calidad de código}
+
+\gqm {
+    % Propósito
+    Mejorar
+    % Atributo
+    la calidad
+    % Objeto
+    del código de la aplicación
+    % Punto de vista
+    desde un punto de vista del código limpio y las buenas prácticas de programación
+} {
+    \pregunta ¿Que tan bien se puede extender el proyecto?
+    \pregunta ¿Que tan fácil es testear?
+    \pregunta ¿Que tan bien se puede mantener la aplicación en el tiempo?
+    \pregunta ¿Que tanto se puede reutilizar el código existente?
+    \pregunta ¿Que tan complejo de entender es el código?
+} {
+    \metrica {
+        \item Nombre: MPC (Cantidad de métodos por clase)
+    } {
+        \item Información que brinda: Tamaño promedio de las clases
+        \item Para quien es útil: Desarrollador
+        \item Entidad: Código completo del dominio y de la interfaz
+        \item Fórmula: MPC = $\Sigma\ C_i$ (donde $C_i$ es la complejidad ciclomática de una clase)
+        \item Atributos a observar
+            \begin{itemize}
+                \item Extensibilidad
+                \item Testeabilidad
+            \end{itemize}
+        \item Responsable: Desarrollador
+        \item Frecuencia: Semanal
+        \item Almacenamiento: MS Excel
+        \item Herramientas a utilizar:
+        \begin{itemize}
+            \item IntelliJ Idea
+            \item CodeMR
+        \end{itemize}
+    }
+    \metrica {
+        \item Nombre: RPC (Respuestas para una clase)
+    } {
+        \item Información que brinda: 
+        \item Para quien es útil: Desarrollador
+        \item Entidad: Clases del dominio y la interfaz
+        \item Fórmula: RPC = Numero de métodos en el conjunto respuesta
+        \item Atributos a observar
+            \begin{itemize}
+                \item Modificabilidad
+                \item Testeabilidad
+            \end{itemize}
+        \item Responsable: Desarrollador
+        \item Frecuencia: Semanal
+        \item Almacenamiento: MS Excel
+        \item Herramientas a utilizar:
+        \begin{itemize}
+            \item IntelliJ Idea
+            \item CodeMR
+        \end{itemize}
+    }
+    \metrica {
+        \item Nombre: ACO (Acoplamiento entre clases de objetos)
+    } {
+        \item Información que brinda: Cantidad de colaboraciones para una clase determinada
+        \item Para quien es útil: Desarrollador
+        \item Entidad: Cláses del dominio y la interfaz
+        \item Fórmula: ACO =  Numero de colaboraciones
+        \item Atributos a observar
+            \begin{itemize}
+                \item Modificabilidad
+                \item Reusabilidad
+            \end{itemize}
+        \item Responsable: Desarrollador
+        \item Frecuencia: Semanal
+        \item Almacenamiento: MS Excel
+        \item Herramientas a utilizar:
+        \begin{itemize}
+            \item IntelliJ Idea
+            \item CodeMR
+        \end{itemize}
+    }
+    \metrica {
+        \item Nombre: PAH (Profundidad del arbol de herencia)
+    } {
+        \item Información que brinda: Que tan abajo del arbol de herencia se encuentra una apliación
+        \item Para quien es útil: Desarrollador
+        \item Entidad: Cláses del dominio y la interfaz
+        \item Fórmula: PAH = Máxima cantidad de clases por encima de una clase en particular
+        \item Atributos a observar
+            \begin{itemize}
+                \item Complejitud
+                \item Mantenibilidad
+                \item Extensibilidad
+            \end{itemize}
+        \item Responsable: Desarrollador
+        \item Frecuencia: Semanal
+        \item Almacenamiento: MS Excel
+        \item Herramientas a utilizar:
+        \begin{itemize}
+            \item IntelliJ Idea
+            \item CodeMR
+        \end{itemize}
+    }
+}
+
+    
+    
+\subsection{Completitud de los requerimientos}
+
+\gqm {
+    % Propósito
+    Verificar 
+    % Atributo
+    la completitud de los requerimientos 
+    % Objeto
+    del documento 
+    % Punto de vista
+    desde el punto de vista del \pmo
+} {
+    \pregunta Existe una referencia de requerimiento en la documentación?
+    \pregunta Todos las funciones de la aplicación tienen un requerimiento?
+} {
+    \metrica {
+        Confiabilidad
+    } {
+        \item Nombre: Confiabilidad
+        \item Información que brinda: Confiabilidad de la aplicación
+        \item Para quien es útil: \pmo
+        \item Entidad: Documentación
+        \item Fórmula: Cantidad de requerimientos detallados / requerimientos implementados.
+        \item Atributos a observar
+            \begin{itemize}
+                \item Completitud de cada requerimiento.
+            \end{itemize}
+        \item Responsable: \analista
+        \item Frecuencia: Mensual
+        \item Almacenamiento: Informe entregado
+        \item Herramientas a utilizar: N/A
+    }
+}   
+
+\subsection{Casos de uso}
+
+\gqm {
+    % Propósito
+    Verificar 
+    % Atributo
+    la cobertura de casos de uso
+    % Objeto
+    del documento 
+    % Punto de vista
+    desde el punto de vista del \interesado
+} {
+    \pregunta Cada una de las funcionalidades de la aplicación tiene un caso de uso?
+    \pregunta Los casos de uso reflejan exactamente el flujo de trabajo de cada funcionalidad?
+} {
+    \metrica {
+        Susceptibilidad de someterse a pruebas
+    } {
+        \item Nombre: Casos de uso
+        \item Información que brinda: Susceptibilidad de someterse a pruebas de la aplicación.
+        \item Para quien es útil: \pmo
+        \item Entidad: Documentación
+        \item Fórmula: Cantidad de casos de uso detallados / casos de uso implementados
+        \item Atributos a observar
+            \begin{itemize}
+                \item Completitud
+                \item Mantenibilidad
+            \end{itemize}
+        \item Responsable: \analista
+        \item Frecuencia: Mensual
+        \item Almacenamiento: Informe entregado
+        \item Herramientas a utilizar: N/A
+    }
+}   
+

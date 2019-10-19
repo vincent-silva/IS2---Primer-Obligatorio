@@ -1,0 +1,87 @@
+\pagestyle{fancy}
+\renewcommand\headrulewidth{0pt}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+
+\fancypagestyle{plain}{
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyhf{}
+    \fancyfoot[R]{\thepage}
+}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\lstset{language=Java,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pred},
+  basicstyle=\ttfamily,
+  morecomment=[s][\color{pblue}]{/**}{*/}
+}
+
+
+\let\pregunta\item
+
+\newcommand*\gqm[3]{
+    \begin{itemize}
+        \item Objetivos: #1
+        \item Preguntas:
+        \begin{itemize}
+            #2
+        \end{itemize}
+        \item Métricas:
+        \begin{itemize}
+            #3
+        \end{itemize}
+    \end{itemize}
+}
+
+\newcommand*\metrica[2]{
+    \item Nombre: #1
+    \begin{itemize}
+        #2
+    \end{itemize}
+}
+
+\newcommand{\testmetricas}{
+    \gqm {
+        Definir usabilidad
+    } {
+        \pregunta pregunta1
+        \pregunta pregunta2
+    } {
+        \metrica {
+            Usabildad
+        } {
+            \item Nombre: Usabildad
+            \item Información que brinda: Usabilidad de la aplicación
+            \item Para quien es útil: Gerente del proyecto
+            \item Entidad: Aplicación
+            \item Fórmula: $\Sigma$ items de la heurística cumplidos en su totalidad
+            \item Atributos a observar
+                \begin{itemize}
+                    \item Usabilidad de la aplicación.
+                \end{itemize}
+            \item Recolección: Heurísticas de usabilidad de Nielsen
+            \item Responsable: Desarrollador
+            \item Frecuencia: Mensual
+            \item Almacenamiento: N/A
+            \item Herramientas a utilizar: N/A
+        }
+    }
+}
+
+%Definicion de variables globales
+
+\newcommand{\interesado}{Stakeholder}
+\newcommand{\desarrolador}{Desarrollador}
+\newcommand{\analista}{Analista}
+\newcommand{\pmo}{Gerente de proyecto}
