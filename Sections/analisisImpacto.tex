@@ -1,0 +1,85 @@
+\chapter{Análisis de impacto}
+
+\section{Solicitud de cambio número 1}
+Cambio: Inicio de sesión (Log in): El sistema debe controlar el acceso solo a usuarios
+registrados.
+
+Se debe modificar el diseño de la aplicación para que el primer paso antes de utilizarla sea un mensaje de inicio de sesión, este mensaje deberá checkear las credenciales provistas contra un diccionario de credenciales que deberá estár almacenado en la aplicación, el requisito es sobre el logueo de el usuario asi que no se considerará por el momento realizar el registro de los mismos.
+
+\prettyTable{|c|c|c|c|c|c|c|c|}{
+                    & \mlcell{Gestionar\\información\\basica} &\mlcell{Registrar en\\calendario los\\paseos} &\mlcell{Calendario de\\alimentación\\de la mascota} &\mlcell{Registro de\\actividad\\ realizada} &\mlcell{Agendar\\servicio\\veterinaria} &\mlcell{Recordatorios\\via email} & \mlcell{Inicio de sesión} \\ \hline
+    Requerimientos  &       &       &       &       &       &       & \point \\ \hline
+    Diseño          &       &       &       &       &       &       & \point \\ \hline
+    Código          &       &       &       &       &       &       & \point \\ \hline
+    Casos de prueba &       &       &       &       &       &       & \point \\ \hline
+}
+
+Como se puede apreciar, el anterior cambio solamente afecta desde requerimientos hasta los casos de prueba de manera vertical, mientras que horizontalmente no afecta otras áreas de la aplicación, ya que no tiene relación directa con el dominio del problema.
+
+\section{Solicitud de cambio número 2}
+
+Cambio: Registro de animales: Actualmente el sistema solo permite registrar perros, se necesita que sea posible registrar cualquier animal indicando su tipo (perro, gato, caballo, vaca, etc)
+
+Se debe modificar el diseño de la aplicación en el área de gestión de mascotas, esta misma deberá representar que se está almacenando una mascota cuya especie es desconocida, por lo que deberá generalizarse lo más posible para acomodarse al hecho. Como se está generalizando el proceso de almacenaje de una mascota, lo correcto seria generalizar también el dominio por lo que se deberá refactorizar la clase perro para que refleje el cambio, a su vez, al refactorizar la clase, también se verán afectadas las pruebas unitarias sobre la misma, las cuales referirán a otro tipo de clase, por lo tanto se modificarán las pruebas unitarias para que reflejen también el cambio.
+\prettyTable{|c|c|c|c|c|c|c|c|}{
+                    & \mlcell{Gestionar\\información\\basica} &\mlcell{Registrar en\\calendario los\\paseos} &\mlcell{Calendario de\\alimentación\\de la mascota} &\mlcell{Registro de\\actividad\\ realizada} &\mlcell{Agendar\\servicio\\veterinaria} &\mlcell{Recordatorios\\via email} & \mlcell{Registro de animales} \\ \hline
+    Requerimientos  &\point &       &       &       &       &       & \point \\ \hline
+    Diseño          &\point &       &       &       &       &       & \point \\ \hline
+    Código          &\point &       &       &       &       &       & \point \\ \hline
+    Casos de prueba &\point &       &       &       &       &       & \point \\ \hline
+}
+
+Como se describió previamente este cambio afecta horizontalmente a la gestión de información básica de la mascota, y verticalmente va desde los requerimientos hasta los casos de prueba.
+
+\section{Solicitud de cambio número 3}
+Cambio: Registro de padrinos: El sistema debe poder registrar padrinos de los animales. De los padrinos se solicita registrar nombre, apellido, teléfono, correo, ciudad, país y los animales de los cuales desea ser padrino.
+Se debera agregar una nueva pantalla que permita registrar un padrino de un animal/s y asignarlo, además se tendrá en cuenta modificar el menú de la aplicación para que la misma muestre esa opción, en cuanto al código se deberá crear una nueva estructura de datos la cual contendrá todos los datos del padrino mas la asignación a los animales que posea, esta estructura deberá ser testeada por lo que se generará una suite de pruebas para esta.
+
+\prettyTable{|c|c|c|c|c|c|c|c|}{
+                    & \mlcell{Gestionar\\información\\basica} &\mlcell{Registrar en\\calendario los\\paseos} &\mlcell{Calendario de\\alimentación\\de la mascota} &\mlcell{Registro de\\actividad\\ realizada} &\mlcell{Agendar\\servicio\\veterinaria} &\mlcell{Recordatorios\\via email} & \mlcell{Registro de\\ padrinos} \\ \hline
+    Requerimientos  &       &       &       &       &       &       & \point \\ \hline
+    Diseño          &       &       &       &       &       &       & \point \\ \hline
+    Código          &       &       &       &       &       &       & \point \\ \hline
+    Casos de prueba &       &       &       &       &       &       & \point \\ \hline
+}
+
+Este cambio solamente afecta a la aplicación verticalmente, ya que otras áreas de la aplicación no tienen dependencias de la anterior mensionada.
+
+\section{Solicitud de cambio número 4}
+
+Cambio: Se debe mejorar la interfaz gráfica para que la aplicación sea más amigable en su
+uso.
+Se modificará solamente la interfáz gráfica de la aplicación para que esta sea más usable, por lo que se checkeará con las métricas correspondientes los cambios realizados. Este cambio solamente afecta a la aplicación de manera horizontal, ya que no posee en si misma cambios en los requerimientos, al ser sobre la mejora de un requerimiento no funcional, ni el código ni las pruebas, no afecta de manera vertical.
+
+\prettyTable{|c|c|c|c|c|c|c|c|}{
+                    & \mlcell{Gestionar\\información\\basica} &\mlcell{Registrar en\\calendario los\\paseos} &\mlcell{Calendario de\\alimentación\\de la mascota} &\mlcell{Registro de\\actividad\\ realizada} &\mlcell{Agendar\\servicio\\veterinaria} &\mlcell{Recordatorios\\via email} & \mlcell{Mejora de la\\ interfaz\\ gráfica} \\ \hline
+    Requerimientos  &       &       &       &       &       &       &        \\ \hline
+    Diseño          &\point &\point &\point &\point &\point &\point & \point \\ \hline
+    Código          &       &       &       &       &       &       &        \\ \hline
+    Casos de prueba &       &       &       &       &       &       &        \\ \hline
+}
+
+
+\begin{comment}
+    Casos de uso:
+        - Gestionar información básica de un perro
+        - Registrar en calendario los paseos
+        - Calendario de alimentacion de la mascota
+        - Registro de actividad realizada
+        - Agendar servicio de cuidado en una veterinaria
+        - Recordatorios via email
+        
+    Inicio de sesión
+    Registro de animales
+    Registro de padrinos
+    Mejora interfaz gráfica
+    
+    \prettyTable{|l|l|l|l|l|l|l|l|}{
+                    & \rotatebox{90}{\tiny{Gestionar información basica}} & & & & & & \\ \hline
+    Requerimientos  & & & & & & & \\ \hline
+    Diseño          & & & & & & & \\ \hline
+    Código          & & & & & & & \\ \hline
+    Casos de prueba & & & & & & & \\ \hline
+}
+
+\end{comment}
