@@ -1,4 +1,37 @@
 \section{Estimación}
-Indicar forma de cálculo de complejidad y tamaño.
-Mostrar tablas y/o gráficos, de ser necesario.
-Máximo: 1 página.
+
+Para la estimación de el esfuerzo que cada tarea se descartó la utilización de herramientas de estimación perimétrica, esto es debido a que no existe suficiente información empírica y válida previa al comienzo del proyecto, por lo que solamente se puede recurrir a la experiencia previa de los participantes del desarrollo en tareas de envergadura similar y del conocimiento del lenguaje que los mencionados posean.
+Por lo tanto se optó por utilizar como base la distribución PERT, la cual tiene la siguiente fórmula para calcular el valor esperado de una determinada tarea:
+
+\[
+    T_{esperado} = \frac{T_{pesimista} + 4T_{medio} + T_{optimista}}{6}
+\]
+
+Para lograr valores lo más objetivos posibles se calcularon individualmente las estimaciones dentro del equipo y luego se realizó el promedio de cada uno de los ítems individuales, así se reduce el sesgo que hay en los valores escojidos. Luego para obtener la cantidad de días se coteja el tiempo de una tarea con un recurso asignado a ella y dividiendo este tiempo en el valor promedio de horas disponibles por día para el miembro asignado.
+
+
+\prettyTable{|l|l|l|l|}{
+    \textbf{Actividad} & \textbf{Recurso} & \textbf{Esfuerzo} & \textbf{Tiempo estimado} \\ \hline
+    Actualización del ESRE &  Analista de requerimientos & & \\ \hline
+    Reporte de funcionalidades del sistema & Analista de requerimientos & & \\ \hline
+    Inicio de sesión & Desarrollador & & \\ \hline
+    Registro de animales & Desarrollador & & \\ \hline
+    Registro de padrinos & Desarrollador & & \\ \hline
+    Mejora de la interfaz gráfica & Desarrollador & & \\ \hline
+    Mejora de densidad de defectos & Desarrollador & & \\ \hline
+    Correcciones de bugs sobre requisitos previos & Desarrollador & & \\ \hline
+    QA y Testing & SQA & & \\ \hline
+}
+
+\begin{comment}
+    Indicar forma de cálculo de complejidad y tamaño.
+    Mostrar tablas y/o gráficos, de ser necesario.
+    Máximo: 1 página.
+    
+    
+    Para realizar la estimación de la duración de cada tarea se tuvieron en cuenta diversos factores como ser el personal que realizará esa tarea tanto como el esfuerzo que llevaría rewbsalizar esta tarea  y las dificultades que estas puedan conllevar 
+
+Mediante el análisis de impacto  de los cambios pudimos obtener el esfuerzo que llevaría cada uno de estos.
+Para obtener este esfuerzo utilizamos la siguiente escala:
+
+\end{comment}

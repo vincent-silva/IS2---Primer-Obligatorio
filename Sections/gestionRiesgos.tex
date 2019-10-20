@@ -1,18 +1,88 @@
 \section{Gestión de los riesgos}
-Explicar cómo se va a realizar la gestión de riesgos (identificación, análisis cualitativo, cuantitativo, etc.). 
-Máximo: media página.
 
-\prettyTable{|l|l|l|l|l|l|}{
-    \textbf{Riesgo} & \textbf{Impacto (I)} & \textbf{Probabilidad (P)} & \textbf{Magnitud IxPO} & \textbf{Plan de respuesta} & \textbf{Plan de contingencia} \\ \hline
+\subsection{Identificación de los riesgos}
+\begin{itemize}
+    \item Requerimientos incorrectos
+    \item Alteración de los requerimientos
+    \item Falta de recursos técnicos
+    \item Falta de recursos materiales
+    \item Falla de comunicación en el equipo
+    \item Retraso de tareas por previas dependencias incumplidas
+    \item Tiempo de tarea mal estimado
+    \item Priorización errónea de tareas
+    \item Baja de integrante importante del proyecto
+    \item Baja de productividad de integrante
+    \item Alteración de fecha límite
+\end{itemize}
+\newpage
+\subsection{Categorización de los riesgos}
+
+\prettyTable{|l|l|l|l|l|l|l|}{
+    \textbf{Id} & \textbf{Riesgo} & \textbf{\mlcell{Impacto\\(I)}} & \textbf{\mlcell{Probabilidad\\(P)}} & \textbf{\mlcell{Magnitud\\(IxPO)}} & \textbf{Plan de respuesta} & \textbf{Plan de contingencia} \\ \hline
+    1 &
+    \mlcell{Alteración de los\\requerimientos} 
+        & 3 & 0.8 & 2.4 & 
+        \mlcell{Validar los requerimientos\\en intervalos regulares} & 
+        \mlcell{Revisar, validar y modificar\\el plan de proyecto} \\ \hline
+    2 &
+    \mlcell{Tiempo de tarea mal estimado}
+        & 3 & 0.8 & 2.4 & 
+        \mlcell{Evaluar semanalmente el\\ cumplimiento de las tareas\\ y los tiempos requeridos,\\ cotejar con el esfuerzo\\ asignado, actualizar\\ tiempos de tareas del\\ mismo esfuerzo} & 
+        \mlcell{Reevaluar prioridades de\\ las tareas} \\ \hline
+    3 &
+    \mlcell{Baja de productividad\\ del equipo}
+        & 3 & 0.6 & 1.8 & 
+        \mlcell{Evaluar cada semana el\\ cumplimiento de tareas\\ junto con el tiempo\\ sobrante/faltante} & 
+        \mlcell{Cambiar el tiempo\\ estimado para dichas\\ tareas o rechazar tareas\\ futuras de prioridad baja} \\ \hline
+    4 &
+    \mlcell{Requerimientos \\incorrectos} 
+        & 3 & 0.4 & 1.2 &                                       
+        \mlcell{Validar los requerimientos\\en intervalos regulares} & 
+        \mlcell{Revisar, validar y modificar\\el plan de proyecto} \\ \hline
+    5 &
+    \mlcell{Dependencias\\ incumplidas de\\ tareas} 
+        & 3 & 0.4 & 1.2 & 
+        \mlcell{Priorizar las tareas del\\ camino crítico} & 
+        \mlcell{Priorizar las tareas del\\ camino crítico} \\ \hline
+    6 &
+    \mlcell{Falta de recursos\\técnicos} 
+        & 4 & 0.2 & 0.8 & 
+        \mlcell{Evaluar las tareas a\\realizar antes del inicio y\\generar conocimiento de\\ser necesario} & 
+        \mlcell{Redefinir el tiempo\\disponible para la tarea\\mientras se consiguen los\\recursos técnicos necesarios} \\ \hline
+    7 &
+    \mlcell{Baja de integrante\\ del equipo} 
+        & 4 & 0.2 & 0.8 & 
+        \mlcell{Comprometerse a realizar\\ avisos con tiempo sobre\\ situaciones de fuerza\\ mayor} & 
+        \mlcell{Priorizar solamente\\ aquellas tareas críticas\\ para el avance del\\ proyecto} \\ \hline
+    8 &
+    \mlcell{Alteración de los \\criterios de\\ aceptación}
+        & 4 & 0.2 & 0.8 & 
+        \mlcell{Mantener los criterios\\ de aceptación bien\\ definidos} & 
+        \mlcell{Reevaluar las tareas\\ según los criterios\\ de aceptación} \\ \hline
+    9 &
+    \mlcell{Priorización errónea\\ de tareas} 
+        & 1 & 0.6 & 0.6 & 
+        \mlcell{Definir correctamente el\\ plan de mantenimiento,\\ asegurarse que la prioridad\\ es la correcta} &  \\ \hline
+    10 &
+    \mlcell{Falla de\\comunicacion en el\\equipo} 
+        & 1 & 0.4 & 0.4 & 
+        \mlcell{Evaluar la eficiencia de las\\ vías de comunicación\\ utilizadas, dar cuenta de lo\\ que se realizó y los\\ obstáculos encontrados en\\ cada reunión} & 
+        \mlcell{Generar una reunión de\\ actualización para que\\ todos los miembros estén\\ al día} \\ \hline
+    11 &
+    \mlcell{Falta de recursos\\materiales} 
+        & 1 & 0.2 & 0.2 & 
+        \mlcell{Checkear los recursos\\materiales regularmente} &
+        \mlcell{Buscar reemplazo o\\adquisición de los\\recursos} \\ \hline
 }
 
+\textbf{Notas}: 
+\begin{enumerate}
+    \item Los riesgos aparecen ordenados por magnitud.
+    \item La columna plan de respuesta corresponde a las tareas a realizar para evitar o amortizar el resigo.
+    \item La columna plan de contingencia corresponde a las tareas a realizar en el caso de que el riesgo se genere.
+\end{enumerate}
 
-Notas: 
-1) Los riesgos aparecen ordenados por magnitud.
-2) La columna plan de respuesta se refiere a acciones para que el riesgo no se convierta en problema.
-3) La columna plan de contingencia se refiere a acciones en caso que el riesgo se haya convertido en problema.	
-
-Impacto: 
+\textbf{Impacto}: 
 0 - Ninguno.
 1 - Marginal.
 2 - Poco importante.
@@ -20,10 +90,54 @@ Impacto:
 4 - Crítica (pude detener el proyecto).
 5 - Catastrófica (fracaso del proyecto).	
 
-Probabilidad de ocurrencia:
+\textbf{Probabilidad de ocurrencia}:
 0.0 - no probable.
 0.2 - poco probable.
 0.4 - probable.
 0.6 - muy probable.
 0.8 - altamente probable.
 1.0 - se convierte en problema.
+\newpage
+\subsection{Matriz de riesgos}
+\prettyTable{|l|l|l|l|l|l|l|}{
+    Seguro              &  \cellcolor{yellow!25} & \cellcolor{orange!25}  & \cellcolor{orange!25}  & \cellcolor{red!25}   & \cellcolor{red!25} &\cellcolor{red!25}  \\ \hline
+    Altamente probable  &  \cellcolor{yellow!25} &  \cellcolor{yellow!25} & \cellcolor{orange!25}  & 1 2 \cellcolor{orange!25} & \cellcolor{red!25}  &\cellcolor{red!25} \\ \hline
+    Muy probable        & \cellcolor{green!25}  & 9 \cellcolor{yellow!25} &  \cellcolor{yellow!25} & 3 \cellcolor{orange!25} & \cellcolor{orange!25}  & \cellcolor{red!25}\\ \hline
+    Probable            & \cellcolor{green!25}  & 10 \cellcolor{green!25} &  \cellcolor{yellow!25} & 4 5 \cellcolor{yellow!25} & \cellcolor{orange!25}  & \cellcolor{orange!25} \\ \hline
+    Poco probable       &  \cellcolor{blue!25} & 11 \cellcolor{green!25} &  \cellcolor{green!25} & \cellcolor{yellow!25}  & 6 7 8 \cellcolor{yellow!25} & \cellcolor{orange!25} \\ \hline
+    Improbable          & \cellcolor{blue!25}  &  \cellcolor{blue!25} & \cellcolor{green!25}  & \cellcolor{green!25}  & \cellcolor{yellow!25}  & \cellcolor{yellow!25} \\ \hline
+                        & Ninguno & Marginal & Poco importante & Importante & Crítico & Catastrófico \\ \hline
+}
+
+\begin{comment}
+
+
+
+
+    
+    Explicar cómo se va a realizar la gestión de riesgos (identificación, análisis cualitativo, cuantitativo, etc.). 
+Máximo: media página.
+    
+    
+    
+    
+    
+    Alteración de fecha límite & 5 & 0 & 0 &  &  \\
+    
+
+
+
+
+
+- Requerimientos mal definidos. (Validar los requerimientos por el cliente).
+- No contar todos los recursos necesarios.
+- Cambio de requerimientos en una etapa avanzada del proyecto.
+- Mala comunicación en el equipo de trabajo.
+- Tiempo elevado de aprendizaje de una tecnología.
+- Baja de integrante importante del proyecto.
+- Priorizar determinadas funcionalidades sobre otras.
+- Mala estimación de tiempo y costos.
+- Incumplimiento en los estándares de codificación.
+- Retraso por dependencia entre tareas.
+
+\end{comment}
