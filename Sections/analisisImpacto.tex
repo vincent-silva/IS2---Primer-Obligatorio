@@ -6,12 +6,12 @@ registrados.
 
 Se debe modificar el diseño de la aplicación para que el primer paso antes de utilizarla sea un mensaje de inicio de sesión, este mensaje deberá checkear las credenciales provistas contra un diccionario de credenciales que deberá estár almacenado en la aplicación, el requisito es sobre el logueo de el usuario asi que no se considerará por el momento realizar el registro de los mismos.
 
-\prettyTable{|c|c|c|c|c|c|c|c|}{
-                    & \mlcell{Gestionar\\información\\basica} &\mlcell{Registrar en\\calendario los\\paseos} &\mlcell{Calendario de\\alimentación\\de la mascota} &\mlcell{Registro de\\actividad\\ realizada} &\mlcell{Agendar\\servicio\\veterinaria} &\mlcell{Recordatorios\\via email} & \mlcell{Inicio de sesión} \\ \hline
-    Requerimientos  &       &       &       &       &       &       & \point \\ \hline
-    Diseño          &       &       &       &       &       &       & \point \\ \hline
-    Código          &       &       &       &       &       &       & \point \\ \hline
-    Casos de prueba &       &       &       &       &       &       & \point \\ \hline
+\prettyTable{|c|c|c|c|c|c|c|c|c|c|}{
+                    & \mlcell{Ingresar\\datos\\precargados} & \mlcell{Gestión de\\usuarios}& \mlcell{Gestionar\\información\\basica} &\mlcell{Registrar en\\calendario los\\paseos} &\mlcell{Calendario de\\alimentación\\de la mascota} &\mlcell{Registro de\\actividad\\ realizada} &\mlcell{Agendar\\servicio\\veterinaria} &\mlcell{Recordatorios\\via email} & \mlcell{Inicio de sesión} \\ \hline
+    Requerimientos  &      &      &       &       &       &       &       &       & \point \\ \hline
+    Diseño          &      &      &       &       &       &       &       &       & \point \\ \hline
+    Código          &      &      &       &       &       &       &       &       & \point \\ \hline
+    Casos de prueba &      &      &       &       &       &       &       &       & \point \\ \hline
 }
 
 Como se puede apreciar, el anterior cambio solamente afecta desde requerimientos hasta los casos de prueba de manera vertical, mientras que horizontalmente no afecta otras áreas de la aplicación, ya que no tiene relación directa con el dominio del problema.
@@ -21,12 +21,12 @@ Como se puede apreciar, el anterior cambio solamente afecta desde requerimientos
 Cambio: Registro de animales: Actualmente el sistema solo permite registrar perros, se necesita que sea posible registrar cualquier animal indicando su tipo (perro, gato, caballo, vaca, etc)
 
 Se debe modificar el diseño de la aplicación en el área de gestión de mascotas, esta misma deberá representar que se está almacenando una mascota cuya especie es desconocida, por lo que deberá generalizarse lo más posible para acomodarse al hecho. Como se está generalizando el proceso de almacenaje de una mascota, lo correcto seria generalizar también el dominio por lo que se deberá refactorizar la clase perro para que refleje el cambio, a su vez, al refactorizar la clase, también se verán afectadas las pruebas unitarias sobre la misma, las cuales referirán a otro tipo de clase, por lo tanto se modificarán las pruebas unitarias para que reflejen también el cambio.
-\prettyTable{|c|c|c|c|c|c|c|c|}{
-                    & \mlcell{Gestionar\\información\\basica} &\mlcell{Registrar en\\calendario los\\paseos} &\mlcell{Calendario de\\alimentación\\de la mascota} &\mlcell{Registro de\\actividad\\ realizada} &\mlcell{Agendar\\servicio\\veterinaria} &\mlcell{Recordatorios\\via email} & \mlcell{Registro de animales} \\ \hline
-    Requerimientos  &\point &       &       &       &       &       & \point \\ \hline
-    Diseño          &\point &       &       &       &       &       & \point \\ \hline
-    Código          &\point &       &       &       &       &       & \point \\ \hline
-    Casos de prueba &\point &       &       &       &       &       & \point \\ \hline
+\prettyTable{|c|c|c|c|c|c|c|c|c|c|}{
+                    & \mlcell{Ingresar\\datos\\precargados} & \mlcell{Gestión de\\usuarios}& \mlcell{Gestionar\\información\\basica} &\mlcell{Registrar en\\calendario los\\paseos} &\mlcell{Calendario de\\alimentación\\de la mascota} &\mlcell{Registro de\\actividad\\ realizada} &\mlcell{Agendar\\servicio\\veterinaria} &\mlcell{Recordatorios\\via email} & \mlcell{Registro de animales} \\ \hline
+    Requerimientos  &       &       &\point &       &       &       &       &       & \point \\ \hline
+    Diseño          &       &       &\point &       &       &       &       &       & \point \\ \hline
+    Código          &       &       &\point &       &       &       &       &       & \point \\ \hline
+    Casos de prueba &       &       &\point &       &       &       &       &       & \point \\ \hline
 }
 
 Como se describió previamente este cambio afecta horizontalmente a la gestión de información básica de la mascota, y verticalmente va desde los requerimientos hasta los casos de prueba.
@@ -35,15 +35,15 @@ Como se describió previamente este cambio afecta horizontalmente a la gestión 
 Cambio: Registro de padrinos: El sistema debe poder registrar padrinos de los animales. De los padrinos se solicita registrar nombre, apellido, teléfono, correo, ciudad, país y los animales de los cuales desea ser padrino.
 Se debera agregar una nueva pantalla que permita registrar un padrino de un animal/s y asignarlo, además se tendrá en cuenta modificar el menú de la aplicación para que la misma muestre esa opción, en cuanto al código se deberá crear una nueva estructura de datos la cual contendrá todos los datos del padrino mas la asignación a los animales que posea, esta estructura deberá ser testeada por lo que se generará una suite de pruebas para esta.
 
-\prettyTable{|c|c|c|c|c|c|c|c|}{
-                    & \mlcell{Gestionar\\información\\basica} &\mlcell{Registrar en\\calendario los\\paseos} &\mlcell{Calendario de\\alimentación\\de la mascota} &\mlcell{Registro de\\actividad\\ realizada} &\mlcell{Agendar\\servicio\\veterinaria} &\mlcell{Recordatorios\\via email} & \mlcell{Registro de\\ padrinos} \\ \hline
-    Requerimientos  &       &       &       &       &       &       & \point \\ \hline
-    Diseño          &       &       &       &       &       &       & \point \\ \hline
-    Código          &       &       &       &       &       &       & \point \\ \hline
-    Casos de prueba &       &       &       &       &       &       & \point \\ \hline
+\prettyTable{|c|c|c|c|c|c|c|c|c|c|}{
+                    & \mlcell{Ingresar\\datos\\precargados} & \mlcell{Gestión de\\usuarios}& \mlcell{Gestionar\\información\\basica} &\mlcell{Registrar en\\calendario los\\paseos} &\mlcell{Calendario de\\alimentación\\de la mascota} &\mlcell{Registro de\\actividad\\ realizada} &\mlcell{Agendar\\servicio\\veterinaria} &\mlcell{Recordatorios\\via email} & \mlcell{Registro de\\ padrinos} \\ \hline
+    Requerimientos  &       &       &       &       &       &       &       &       & \point \\ \hline
+    Diseño          &       &       &       &       &       &       &       &       & \point \\ \hline
+    Código          &       &       &       &       &       &       &       &       & \point \\ \hline
+    Casos de prueba &       &       &       &       &       &       &       &       & \point \\ \hline
 }
 
-Este cambio solamente afecta a la aplicación verticalmente, ya que otras áreas de la aplicación no tienen dependencias de la anterior mensionada.
+Este cambio solamente afecta a la aplicación verticalmente, ya que otras áreas de la aplicación no tienen dependencias de la anterior mencionada.
 
 \section{Solicitud de cambio número 4}
 
@@ -51,14 +51,58 @@ Cambio: Se debe mejorar la interfaz gráfica para que la aplicación sea más am
 uso.
 Se modificará solamente la interfáz gráfica de la aplicación para que esta sea más usable, por lo que se checkeará con las métricas correspondientes los cambios realizados. Este cambio solamente afecta a la aplicación de manera horizontal, ya que no posee en si misma cambios en los requerimientos, al ser sobre la mejora de un requerimiento no funcional, ni el código ni las pruebas, no afecta de manera vertical.
 
-\prettyTable{|c|c|c|c|c|c|c|c|}{
-                    & \mlcell{Gestionar\\información\\basica} &\mlcell{Registrar en\\calendario los\\paseos} &\mlcell{Calendario de\\alimentación\\de la mascota} &\mlcell{Registro de\\actividad\\ realizada} &\mlcell{Agendar\\servicio\\veterinaria} &\mlcell{Recordatorios\\via email} & \mlcell{Mejora de la\\ interfaz\\ gráfica} \\ \hline
-    Requerimientos  &       &       &       &       &       &       &        \\ \hline
-    Diseño          &\point &\point &\point &\point &\point &\point & \point \\ \hline
-    Código          &       &       &       &       &       &       &        \\ \hline
-    Casos de prueba &       &       &       &       &       &       &        \\ \hline
+\prettyTable{|c|c|c|c|c|c|c|c|c|c|}{
+                    & \mlcell{Ingresar\\datos\\precargados} & \mlcell{Gestión de\\usuarios}& \mlcell{Gestionar\\información\\basica} &\mlcell{Registrar en\\calendario los\\paseos} &\mlcell{Calendario de\\alimentación\\de la mascota} &\mlcell{Registro de\\actividad\\ realizada} &\mlcell{Agendar\\servicio\\veterinaria} &\mlcell{Recordatorios\\via email} & \mlcell{Mejora de la\\ interfaz\\ gráfica} \\ \hline
+    Requerimientos  &       &       &       &       &       &       &       &       &        \\ \hline
+    Diseño          &\point &\point &\point &\point &\point &\point &\point &\point & \point \\ \hline
+    Código          &       &       &       &       &       &       &       &       &        \\ \hline
+    Casos de prueba &       &       &       &       &       &       &       &       &        \\ \hline
 }
 
+\section{Solicitud de cambio número 5}
+Cambio: La aplicación puede contener defectos de distinto tipo todavía sin corregir. Se debe
+mejorar la calidad general de la aplicación en cuanto a densidad de defectos. Se
+deben documentar los defectos encontrados y corregidos.
+Se tomarán aquellos errores conocidos por el equipo anterior, más los defectos que se encontraron durante la construcción del inventario. Luego se corregirán problemas del sistema generando casos de prueba nuevos para controlarlos.
+\prettyTable{|c|c|c|c|c|c|c|c|c|c|}{
+                    & \mlcell{Ingresar\\datos\\precargados} & \mlcell{Gestión de\\usuarios} & \mlcell{Gestionar\\información\\basica} &\mlcell{Registrar en\\calendario los\\paseos} &\mlcell{Calendario de\\alimentación\\de la mascota} &\mlcell{Registro de\\actividad\\ realizada} &\mlcell{Agendar\\servicio\\veterinaria} &\mlcell{Recordatorios\\via email} & \mlcell{Resolución\\de errores} \\ \hline
+    Requerimientos  &       &       &       &       &       &       &       &       &        \\ \hline
+    Diseño          &\point &\point &\point &\point &\point &\point &\point &\point & \point \\ \hline
+    Código          &\point &\point &\point &\point &\point &\point &\point &\point & \point \\ \hline
+    Casos de prueba &\point &\point &\point &\point &\point &\point &\point &\point & \point \\ \hline
+}
+
+\section{Solicitud de cambio número 6}
+Cambio: Se desea corregir defectos de estilo en el código fuente, para que respete las buenas prácticas de programación, de codigo limpio y estándares de código java
+Se tomará la lista de errores que nos provee la herramienta PMD y se procederá a refactorizár el código de la aplicación hasta que cumpla con los objetivos del proyecto.
+\prettyTable{|c|c|c|c|c|c|c|c|c|c|}{
+                    & \mlcell{Ingresar\\datos\\precargados} & \mlcell{Gestión de\\usuarios} & \mlcell{Gestionar\\información\\basica} &\mlcell{Registrar en\\calendario los\\paseos} &\mlcell{Calendario de\\alimentación\\de la mascota} &\mlcell{Registro de\\actividad\\ realizada} &\mlcell{Agendar\\servicio\\veterinaria} &\mlcell{Recordatorios\\via email} & \mlcell{Limpieza de\\ código} \\ \hline
+    Requerimientos  &       &       &       &       &       &       &       &       &       \\ \hline
+    Diseño          &       &       &       &       &       &       &       &       &       \\ \hline
+    Código          &\point &\point &\point &\point &\point &\point &\point &\point &       \\ \hline
+    Casos de prueba &       &       &       &       &       &       &       &       &       \\ \hline
+}
+\section{Solicitud de cambio número 7}
+Cambio: Se desa corregir la suite de pruebas sobre el dominio de la aplicacióin además de agregar nuevos tests para los casos que no estén cubiertos
+Se tomará la lista de errores de estilo que nos provee la herramienta PMD y se procedera a resolver las sujerencias que posean, refactorizando las secciones de código que estén fuera de lugar y luego se agregará las pruebas unitarias para los casos que no las posean
+\prettyTable{|c|c|c|c|c|c|c|c|c|c|}{
+                    & \mlcell{Ingresar\\datos\\precargados} & \mlcell{Gestión de\\usuarios} & \mlcell{Gestionar\\información\\basica} &\mlcell{Registrar en\\calendario los\\paseos} &\mlcell{Calendario de\\alimentación\\de la mascota} &\mlcell{Registro de\\actividad\\ realizada} &\mlcell{Agendar\\servicio\\veterinaria} &\mlcell{Recordatorios\\via email} & \mlcell{Corrección de\\casos de\\prueba} \\ \hline
+    Requerimientos  &       &       &       &       &       &       &       &       &       \\ \hline
+    Diseño          &       &       &       &       &       &       &       &       &       \\ \hline
+    Código          &       &       &       &       &       &       &       &       &       \\ \hline
+    Casos de prueba &\point &\point &\point &\point &\point &\point &\point &\point &       \\ \hline
+}
+\section{Solicitud de cambio número 8}
+Cambio: Se desea mejorar la especificación de requerimientos, agregando las secciones que falten y mejorando las que estén
+Se utilizará el conocimiento recolectado en la instancia de generación del inventario, para poder corregir los items de la especificación que no estén correctamente ubicados o nombrados según las convenciones de entrega, luego se procederá a generar una nueva sección de casos de uso que en este momento está faltante en el documento, donde se generarán los casos de uso que se evaluaron pertinentes.
+\prettyTable{|c|c|c|c|c|c|c|c|c|c|}{
+                    & \mlcell{Ingresar\\datos\\precargados} & \mlcell{Gestión de\\usuarios} & \mlcell{Gestionar\\información\\basica} &\mlcell{Registrar en\\calendario los\\paseos} &\mlcell{Calendario de\\alimentación\\de la mascota} &\mlcell{Registro de\\actividad\\ realizada} &\mlcell{Agendar\\servicio\\veterinaria} &\mlcell{Recordatorios\\via email} & \mlcell{Correción de\\ESRE} \\ \hline
+    Requerimientos  &\point &\point &\point &\point &\point &\point &\point &\point &       \\ \hline
+    Diseño          &       &       &       &       &       &       &       &       &       \\ \hline
+    Código          &       &       &       &       &       &       &       &       &       \\ \hline
+    Casos de prueba &       &       &       &       &       &       &       &       &       \\ \hline
+    
+}
 
 \begin{comment}
     Casos de uso:
