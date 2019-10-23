@@ -1,31 +1,23 @@
 \chapter{Gestión de cambios}
+
 \section{Diagrama}
+El equipo de desarrollo respeta el el flujo de trabajo representado en la figura \ref{fig:gdcambios}, para lograr el correcto seguimiento de una solicitud, añadiendo trazabilidad y credibilidad al proceso.
+El proceso inicia con un documento estandarizado que detallamos en la ultima sección de este capitulo.
+
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.50]{Files/gestCambios.png}
+    \includegraphics[scale=0.4]{Files/gestCambiosv2.png}
     \caption{Flujo de aceptación de cambio}
-    \label{fig:clases}
+    \label{fig:gdcambios}
 \end{figure}
 
-\section{Formulario de solicitud}
-\prettyTable{|p{3cm}|p{4cm}|p{3cm}|p{4cm}|}{
-    \textbf{Nro. Solicitud} &  & \textbf{Fecha} &   \\ \hline
-    \textbf{Objetivo} &  & \textbf{Aplicación} &  \\ \hline
-    \textbf{Interesado} & \multicolumn{3}{l|}{} \\ \hline
-    \multicolumn{4}{|l|}{\mlcell{\textbf{Descripción de la modificación deseada:}\\ \\ 
-                                                                                    \\
-                                                                                    \\
-                                                                                    \\
-                                                                                    }} \\ \hline
-    \multicolumn{4}{|l|}{\mlcell{\textbf{Motivo de la modificación:}\\ \\ 
-                                                                                    \\
-                                                                                    \\
-                                                                                    \\
-                                                                                    }} \\ \hline
-}
+
 
 \newpage
 \section{Descripción}
+
+\subsubsection{Se describe cada una de las tareas del proceso:}
+
 \begin{itemize}
     \item Análisis de la solicitud
     \begin{itemize}
@@ -33,7 +25,7 @@
     \end{itemize}
     \item Valoración del cambio
     \begin{itemize}
-        \item En este momento se analiza la trazabilidad del requisito, esto es, ver como le afecta el cambio de requisito a otros que estén relacionados.
+        \item En este momento se analiza la trazabilidad del requisito, esto es, ver como le afecta el cambio de requisito a otros que estén relacionados, evaluando los costos que genera y el impacto que tiene en el software.
     \end{itemize}
     \item Análisis de la modificación
     \begin{itemize}
@@ -45,7 +37,7 @@
     \end{itemize}
     \item Aprobación del cambio
     \begin{itemize}
-        \item A partir de este momento se comienza a negociar con el cliente, si se continúa con la actividad de realizar el cambio o se reformula el cambio
+        \item A partir de este momento se comienza a negociar con el cliente, si se continúa con la actividad de realizar el cambio o se vuelve a definir el cambio
     \end{itemize}
     \item Planear cambio
     \begin{itemize}
@@ -66,6 +58,59 @@
     \item Informar
     \begin{itemize}
         \item Una vez que se realiza la modificación, se le debe comunicar al cliente que el cambio ha sido realizado, para que este lo verifique
+    \end{itemize}
+\end{itemize}
+
+\section{Formulario de solicitud}
+
+\subsubsection{Estándar de documento para solicitud de cambio:}
+
+\prettyTable{|p{3cm}|p{4cm}|p{3cm}|p{4cm}|}{
+    \textbf{Nro. Solicitud} &  & \textbf{Fecha} &   \\ \hline
+    \textbf{Objetivo} &  & \textbf{Aplicación} &  \\ \hline
+    \textbf{Interesado} & \multicolumn{3}{l|}{} \\ \hline
+    \multicolumn{4}{|l|}{\mlcell{\textbf{Descripción de la modificación deseada:}\\ \\ 
+                                                                                    \\
+                                                                                    \\
+                                                                                    \\
+                                                                                    }} \\ \hline
+    \multicolumn{4}{|l|}{\mlcell{\textbf{Motivo de la modificación:}\\ \\ 
+                                                                                    \\
+                                                                                    \\
+                                                                                    \\
+                                                                                    }} \\ \hline
+}
+
+\subsubsection{Detalle:}
+
+\begin{itemize}
+    \item Nro. de solicitud
+    \begin{itemize}
+        \item Indica el número correlativo de solicitud para poder identificado fácilmente
+    \end{itemize}
+    \item Fecha
+    \begin{itemize}
+        \item Indica la fecha en que fue solicitado el cambio
+    \end{itemize}
+    \item Objetivo
+    \begin{itemize}
+        \item Indica el objetivo principal por el cual es solicitado el cambio, ejemplo: regulación, optimización, etc.
+    \end{itemize}
+    \item Aplicación
+    \begin{itemize}
+        \item Indica a que aplicación de software es solicitado el cambio
+    \end{itemize}
+    \item Interesado
+    \begin{itemize}
+        \item Nombre o cargo de la persona que solicita el cambio
+    \end{itemize}
+    \item Descripción de la modificación deseada
+    \begin{itemize}
+        \item En esta campo se debe especificar con el mayor detalle posible, la modificación que se esta solicitando
+    \end{itemize}
+    \item Motivo de la modificación:
+    \begin{itemize}
+        \item Campo en el cual se debe indicar el motivo final del cambio, vital para la ponderación.
     \end{itemize}
 \end{itemize}
 

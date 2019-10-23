@@ -2,20 +2,31 @@
 
 \subsection{Identificación de los riesgos}
 \begin{itemize}
-    \item Requerimientos incorrectos
-    \item Alteración de los requerimientos
-    \item Falta de recursos técnicos
-    \item Falta de recursos materiales
-    \item Falla de comunicación en el equipo
-    \item Retraso de tareas por previas dependencias incumplidas
-    \item Tiempo de tarea mal estimado
-    \item Priorización errónea de tareas
-    \item Baja de integrante importante del proyecto
-    \item Baja de productividad de integrante
-    \item Alteración de fecha límite
+    \item \textbf{Requerimientos incorrectos} \\
+    \textit{Se manifiesta cuando uno o varios requerimientos no son bien especificados, mal aprobados, o bien, mal detallados por el interesado.}
+    \item \textbf{Alteración de los requerimientos} \\
+    \textit{En una etapa avanzada del proyecto, se solicita cambiar la especificación de un requerimiento.}
+    \item \textbf{Falta de recursos técnicos} \\
+    \textit{La no contratación de personal calificado de manera oportuna.}
+    \item  \textbf{Falta de recursos materiales} \\
+    \textit{Riesgo se manifiesta cuando una tarea depende de un recurso material no presente, o momentáneamente no accesible.}
+    \item \textbf{Falla de comunicación en el equipo} \\
+    \textit{La incorrecta comunicación entre integrantes del equipo, puede causar trabajo duplicado, conocimiento que no se comparte a oportunamente, entre otros inconvenientes.}
+    \item \textbf{Retraso de tareas por previas dependencias incumplidas} \\
+    \textit{La dependencia de una tarea por otro evento genera que ese evento pueda afectar el correcto desarrollo de la tarea.}
+    \item \textbf{Tiempo de tarea mal estimado} \\
+    \textit{La estimación para una tarea es, por ejemplo, extremadamente corta, y genera que un recurso ocupe mucho mas tiempo del pensado en ella.}
+    \item \textbf{Priorización errónea de tareas} \\
+    \textit{Riesgo que se manifiesta cuando la mala priorizacion errónea altera el orden correcto de las entregas.}
+    \item \textbf{Baja de productividad de integrante} \\
+    \textit{Un integrante del equipo tiene una productividad muy por debajo de lo espera y utilizado para estimar los tiempos de desarrollo.}
+    \item \textbf{Alteración de fecha límite} \\
+    \textit{Un cambio de las fechas limite afecta todo el plan de trabajo, pudiendo ser causado por eventos no controlados.}
 \end{itemize}
 \newpage
 \subsection{Categorización de los riesgos}
+
+A continuación se presenta la lista de riesgos, junto con la valoración del impacto y la probabilidad, la cuál fué analizada utilizando el juicio de los miembros del equipo, en función a experiencia análoga con proyectos similares, para cada elemento se diseñó un plan de respuesta para evitar que dicho elemento se convierta en un problema y además se generaron planes de contingencia para amortiguar el efecto nocivo de el riesgo volviendose una realidad. Mas adelante se descibirá el método que se utilizó para definir cuales son los riesgos que necesitan un mayor cuidado.
 
 \prettyTable{|l|l|l|l|l|l|l|}{
     \textbf{Id} & \textbf{Riesgo} & \textbf{\mlcell{Impacto\\(I)}} & \textbf{\mlcell{Probabilidad\\(P)}} & \textbf{\mlcell{Magnitud\\(IxPO)}} & \textbf{Plan de respuesta} & \textbf{Plan de contingencia} \\ \hline
@@ -48,12 +59,12 @@
     \mlcell{Falta de recursos\\técnicos} 
         & 4 & 0.2 & 0.8 & 
         \mlcell{Evaluar las tareas a\\realizar antes del inicio y\\generar conocimiento de\\ser necesario} & 
-        \mlcell{Redefinir el tiempo\\disponible para la tarea\\mientras se consiguen los\\recursos técnicos necesarios} \\ \hline
+        \mlcell{} \\ \hline
     7 &
     \mlcell{Baja de integrante\\ del equipo} 
         & 4 & 0.2 & 0.8 & 
         \mlcell{Comprometerse a realizar\\ avisos con tiempo sobre\\ situaciones de fuerza\\ mayor} & 
-        \mlcell{Priorizar solamente\\ aquellas tareas críticas\\ para el avance del\\ proyecto} \\ \hline
+        \mlcell{} \\ \hline
     8 &
     \mlcell{Alteración de los \\criterios de\\ aceptación}
         & 4 & 0.2 & 0.8 & 
@@ -67,12 +78,12 @@
     \mlcell{Falla de\\comunicacion en el\\equipo} 
         & 1 & 0.4 & 0.4 & 
         \mlcell{Evaluar la eficiencia de las\\ vías de comunicación\\ utilizadas, dar cuenta de lo\\ que se realizó y los\\ obstáculos encontrados en\\ cada reunión} & 
-        \mlcell{Generar una reunión de\\ actualización para que\\ todos los miembros estén\\ al día} \\ \hline
+        \mlcell{} \\ \hline
     11 &
     \mlcell{Falta de recursos\\materiales} 
         & 1 & 0.2 & 0.2 & 
         \mlcell{Checkear los recursos\\materiales regularmente} &
-        \mlcell{Buscar reemplazo o\\adquisición de los\\recursos} \\ \hline
+        \mlcell{} \\ \hline
 }
 
 \textbf{Notas}: 
@@ -99,6 +110,18 @@
 1.0 - se convierte en problema.
 \newpage
 \subsection{Matriz de riesgos}
+
+A continuacion se detalla la matriz de riesgos, en esta se puede apreciar visualmente como los riesgos van a incidir en nuestro sistema, los colores de las celdas varian segun la suma de los indices del impacto mas el índice de la probabilidad y según el siguiente criterio:
+
+\begin{itemize}
+    \item Azul: Poco incidente, en el rango de 0-1
+    \item Verde: Cierto grado de incidencia, en el rango de 1-2
+    \item Amarillo: Alto grado de incidencia, en el rango de 3-4
+    \item Rojo: Grado de incidencia muy alto, en el rango de 8-10
+\end{itemize}
+
+Para todos los riesgos de la lista que posean minimamente una incidencia alta se los tomará en consideración y se buscará que los planes de prevención de los mismos se ejecuten correctamente.
+
 \prettyTable{|l|l|l|l|l|l|l|}{
     Seguro              &  \cellcolor{yellow!25} & \cellcolor{orange!25}  & \cellcolor{orange!25}  & \cellcolor{red!25}   & \cellcolor{red!25} &\cellcolor{red!25}  \\ \hline
     Altamente probable  &  \cellcolor{yellow!25} &  \cellcolor{yellow!25} & \cellcolor{orange!25}  & 1 2 \cellcolor{orange!25} & \cellcolor{red!25}  &\cellcolor{red!25} \\ \hline
@@ -108,6 +131,9 @@
     Improbable          & \cellcolor{blue!25}  &  \cellcolor{blue!25} & \cellcolor{green!25}  & \cellcolor{green!25}  & \cellcolor{yellow!25}  & \cellcolor{yellow!25} \\ \hline
                         & Ninguno & Marginal & Poco importante & Importante & Crítico & Catastrófico \\ \hline
 }
+
+
+
 
 \begin{comment}
 

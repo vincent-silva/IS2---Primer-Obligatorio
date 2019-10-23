@@ -10,17 +10,73 @@ Por lo tanto se optó por utilizar como base la distribución PERT, la cual tien
 Para lograr valores lo más objetivos posibles se calcularon individualmente las estimaciones dentro del equipo y luego se realizó el promedio de cada uno de los ítems individuales, así se reduce el sesgo que hay en los valores escojidos. Luego para obtener la cantidad de días se coteja el tiempo de una tarea con un recurso asignado a ella y dividiendo este tiempo en el valor promedio de horas disponibles por día para el miembro asignado.
 
 
-\prettyTable{|l|l|l|l|}{
-    \textbf{Actividad} & \textbf{Recurso} & \textbf{Esfuerzo} & \textbf{Tiempo estimado} \\ \hline
-    Actualización del ESRE &  Analista de requerimientos & & \\ \hline
-    Reporte de funcionalidades del sistema & Analista de requerimientos & & \\ \hline
-    Inicio de sesión & Desarrollador & & \\ \hline
-    Registro de animales & Desarrollador & & \\ \hline
-    Registro de padrinos & Desarrollador & & \\ \hline
-    Mejora de la interfaz gráfica & Desarrollador & & \\ \hline
-    Mejora de densidad de defectos & Desarrollador & & \\ \hline
-    Correcciones de bugs sobre requisitos previos & Desarrollador & & \\ \hline
-    QA y Testing & SQA & & \\ \hline
+\prettyTable{|l|l|l|l|l|l|l|l|}{
+    \textbf{Id} & \textbf{Tarea} & \textbf{RR.HH.} & \textbf{\mlcell{Esf.}} & \textbf{Tiempo} & \textbf{\mlcell{Esf.\\real}} & \textbf{\mlcell{Tiempo\\real}} & \textbf{Diff.} \\ \hline
+1.1.1	&	ESRE de funcionalidades existentes	&		&		&		&		&		&		\\ \hline
+1.1.1.1	&	Especificar funcionalidades sin agregar	&	AR	&	1	&	0,14	&		&		&		\\ \hline
+1.1.1.2	&	Especificar todos los casos de uso	&	AR	&	2	&	0,29	&		&		&		\\ \hline
+1.1.2	&	ESRE de nuevas funcionalidades	&		&		&		&		&		&		\\ \hline
+1.1.2.1	&	Especificar login de usuario	&	Desarrollador	&	1	&	0,14	&		&		&		\\ \hline
+1.1.2.2	&	Especificar registro animales en general	&	Desarrollador	&	1	&	0,14	&		&		&		\\ \hline
+1.1.2.3	&	Especificar registro de padrinos	&	Desarrollador	&	1	&	0,14	&		&		&		\\ \hline
+1.1.2.4	&	Especificar caso de uso login de usuario	&	Desarrollador	&	2	&	0,29	&		&		&		\\ \hline
+1.1.2.5	&	Corregir caso de uso gestión de mascotas	&	Desarrollador	&	2	&	0,29	&		&		&		\\ \hline
+1.1.2.6	&	Especificar caso de uso registro padrino	&	Desarrollador	&	2	&	0,29	&		&		&		\\ \hline
+1.1.3	&	Ponderación de nuevas funcaionalidades	&		&		&		&		&		&		\\ \hline
+1.1.3.1	&	Analizar las solicitudes de cambio	&	AR	&	2	&	0,29	&		&		&		\\ \hline
+1.1.3.2	&	Ponderar criticicidad de cada solicitud	&	AR	&	2	&	0,29	&		&		&		\\ \hline
+1.1.3.3	&	Relevar con el cliente importancia de las solicitudes	&	AR	&	3	&	0,43	&		&		&		\\ \hline
+2.1.1	&	Prototipo mejora de interfaz gráfica	&		&		&		&		&		&		\\ \hline
+2.1.1.1	&	Añadir mensaje de confirmación al editar datos de usuario	&	Desarrollador	&	1	&	0,14	&		&		&		\\ \hline
+2.1.1.2	&	Añadir mensaje de confirmación al editar datos de animal	&	Desarrollador	&	1	&	0,14	&		&		&		\\ \hline
+2.1.1.3	&	Modificar vista para permitir editar usuario	&	Desarrollador	&	3	&	0,43	&		&		&		\\ \hline
+2.1.1.4	&	Modificar controlador para permitir editar usuario	&	Desarrollador	&	2	&	0,29	&		&		&		\\ \hline
+2.1.1.5	&	Habilitar función de modificación en dominio	&	Desarrollador	&	2	&	0,29	&		&		&		\\ \hline
+2.1.2	&	Prototipo de bugs resueltos	&		&		&		&		&		&		\\ \hline
+2.1.2.1	&	Resolver bug de agregar un segundo animal	&	Desarrollador	&	2	&	0,29	&		&		&		\\ \hline
+2.1.2.2	&	Resolver bug ingreso de nombre vacío	&	Desarrollador	&	1	&	0,14	&		&		&		\\ \hline
+2.1.2.3	&	Resolver bug ingreso imagen errónea	&	Desarrollador	&	1	&	0,14	&		&		&		\\ \hline
+2.1.2.4	&	Resolver bug ingreso de nombre de usuario vacío	&	Desarrollador	&	1	&	0,14	&		&		&		\\ \hline
+2.1.2.5	&	Resolver bug repetición de actividad en pestaña de usuario	&	Desarrollador	&	1	&	0,14	&		&		&		\\ \hline
+2.1.2.6	&	Resolver bug de actualización de actividades	&	Desarrollador	&	2	&	0,29	&		&		&		\\ \hline
+2.1.3	&	Prototipo con login	&		&		&		&		&		&		\\ \hline
+2.1.3.1	&	Crear vista con formulario de logueo	&	Desarrollador	&	3	&	0,43	&		&		&		\\ \hline
+2.1.3.2	&	Crear mensaje de avisos de error	&	Desarrollador	&	1	&	0,14	&		&		&		\\ \hline
+2.1.3.3	&	Modificar controlador para ingresar usuario	&	Desarrollador	&	2	&	0,29	&		&		&		\\ \hline
+2.1.3.4	&	Crear clases en dominio para gestionar el login	&	Desarrollador	&	3	&	0,43	&		&		&		\\ \hline
+2.1.4	&	Prototipo con registro de animales	&		&		&		&		&		&		\\ \hline
+2.1.4.1	&	Modifcar vista para ingreso genérico de animales	&	Desarrollador	&	2	&	0,29	&		&		&		\\ \hline
+2.1.4.2	&	Crear mensajes de avisos de error	&	Desarrollador	&	1	&	0,14	&		&		&		\\ \hline
+2.1.4.3	&	Modificar controlador para procesar nuevo cambio	&	Desarrollador	&	2	&	0,29	&		&		&		\\ \hline
+2.1.4.4	&	Refactorizar dominio	&	Desarrollador	&	2	&	0,29	&		&		&		\\ \hline
+2.1.5	&	Prototipo con registro de padrinos	&		&		&		&		&		&		\\ \hline
+2.1.5.1	&	Crear vista para ingreso de datos del padrino	&	Desarrollador	&	2	&	0,29	&		&		&		\\ \hline
+2.1.5.2	&	Crear mensajes de aviso de error	&	Desarrollador	&	1	&	0,14	&		&		&		\\ \hline
+2.1.5.3	&	Modificar controlador para gestión de padrinos	&	Desarrollador	&	2	&	0,29	&		&		&		\\ \hline
+2.1.5.4	&	Crear clase de dominio padrino	&	Desarrollador	&	2	&	0,29	&		&		&		\\ \hline
+2.1.5.5	&	Refactorizar dominio para gestionar padrino	&	Desarrollador	&	3	&	0,43	&		&		&		\\ \hline
+3.1.1	&	Casos de prueba registro de animales	&		&		&		&		&		&		\\ \hline
+3.1.1.1	&	Crear colección de datos para pruebas de equivalencia	&	QA	&	2	&	0,29	&		&		&		\\ \hline
+3.1.1.2	&	Seleccionar combinaciones para pruebas de equivalencia	&	QA	&	3	&	0,43	&		&		&		\\ \hline
+3.1.1.3	&	Crear pruebas unitarias funciones nuevas	&	QA	&	4	&	0,57	&		&		&		\\ \hline
+3.1.1.4	&	Modificar pruebas unitarias de otras clases modificadas	&	QA	&	5	&	0,71	&		&		&		\\ \hline
+3.1.2	&	Casos de prueba registro de padrinos	&		&		&		&		&		&		\\ \hline
+3.1.2.1	&	Crear colección de datos para pruebas de equivalencia	&	QA	&	2	&	0,29	&		&		&		\\ \hline
+3.1.2.2	&	Seleccionar combinaciones para pruebas de equivalencia	&	QA	&	3	&	0,43	&		&		&		\\ \hline
+3.1.2.3	&	Crear pruebas unitarias para registros de padrinos	&	QA	&	5	&	0,71	&		&		&		\\ \hline
+3.1.2.4	&	Modificar pruebas unitarias existentes de funciones modificadas	&	QA	&	5	&	0,71	&		&		&		\\ \hline
+3.1.3	&	Mejora de pruebas unitarias	&		&		&		&		&		&		\\ \hline
+3.1.3.1	&	Analizar reporte de PMD	&	QA	&	1	&	0,14	&		&		&		\\ \hline
+3.1.3.2	&	Modificar errores reportados	&	QA	&	3	&	0,43	&		&		&		\\ \hline
+3.1.3.3	&	Generar nuevas pruebas unitarias	&	QA	&	5	&	0,71	&		&		&		\\ \hline
+3.1.4	&	Casos de prueba login	&		&		&		&		&		&		\\ \hline
+3.1.4.1	&	Crear colección de datos para pruebas de equivalencia	&	QA	&	2	&	0,29	&		&		&		\\ \hline
+3.1.4.2	&	Seleccionar combinaciones para pruebas de equivalencia	&	QA	&	3	&	0,43	&		&		&		\\ \hline
+3.1.4.3	&	Crear pruebas unitarias para funciones nuevas	&	QA	&	4	&	0,57	&		&		&		\\ \hline
+3.1.4.4	&	Modificar pruebas unitarias para funciones existentes afectadas	&	QA	&	5	&	0,71	&		&		&		\\ \hline
+3.2.1	&	Evidencia de pruebas realizadas	&		&	0	&	0	&		&		&		\\ \hline
+3.2.1.1	&	Crear captura de pantallas de cobertura de pruebas unitarias	&	QA	&	1	&	0,14	&		&		&		\\ \hline
+3.2.1.2	&	Generar registro de ejecución de pruebas de equivalencia	&	QA	&	7	&	1	&		&		&		\\ \hline
 }
 
 \begin{comment}
